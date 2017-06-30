@@ -1,0 +1,7 @@
+#!/bin/bash
+wget http://services.swpc.noaa.gov/text/advisory-outlook.txt --output-document advisory1
+diff advisory1 advisory2
+if [ $? = 1 ]
+then
+echo HOLY CRAP SOLAR STUFF
+fi
